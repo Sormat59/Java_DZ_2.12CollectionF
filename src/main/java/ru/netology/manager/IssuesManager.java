@@ -41,7 +41,7 @@ public class IssuesManager {
         if (repository.findById(id) == null) {
             System.out.println("Element with id: " + id + " not found");
         }
-//        if (repository.findById(id) == null) throw new RuntimeException("Element with id: " + id + " not found");
+
         for (Issues issue : repository.returnAll()) {
             if (issue.getId() == id) {
                 return issue.setIsOpened(true);
@@ -54,7 +54,7 @@ public class IssuesManager {
         if (repository.findById(id) == null) {
             System.out.println("Element with id: " + id + " not found");
         }
-//        if (repository.findById(id) == null) throw new RuntimeException("Element with id: " + id + " not found");
+
         for (Issues issue : repository.returnAll()) {
             if (issue.getId() == id) {
                 return issue.setIsOpened(false);
